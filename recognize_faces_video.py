@@ -158,7 +158,8 @@ while True:
         agePreds = ageNet.forward()
         age = ageList[agePreds[0].argmax()]
 
-        label = "{} - {}, Age: {}".format(name, gender, age)
+        # label = "{} - {}, Age: {}".format(name, gender, age)
+        label = "{}".format(gender)
         cv2.rectangle(frame, (left, top), (right, bottom), (0, 255, 0), 2)
         y = top - 15 if top - 15 > 15 else top + 15
 

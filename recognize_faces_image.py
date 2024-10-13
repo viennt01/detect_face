@@ -113,7 +113,8 @@ for ((top, right, bottom, left), name, gender) in zip(boxes, names, genders):
     age = ageList[agePreds[0].argmax()]
 
     # Draw bounding box, name, age, and gender
-    label = "{} - {}, Age: {}".format(name, gender, age)
+    # label = "{} - {}, Age: {}".format(name, gender, age)
+    label = "{}".format(gender)
     cv2.rectangle(image, (left, top), (right, bottom), (0, 255, 0), 2)
     y = top - 15 if top - 15 > 15 else top + 15
     cv2.putText(image, label, (left, y), cv2.FONT_HERSHEY_SIMPLEX, 0.75, (0, 255, 0), 2)
